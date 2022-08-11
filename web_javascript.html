@@ -6,7 +6,7 @@
         </title>
     </head>
     
-    <body>
+    <body> 
         <input type="button" value="hi" onclick="alert('hello')">
         <input type="text" onkeyup="alert('key up')" onkeydown="altert('key down')">
 
@@ -32,5 +32,19 @@
 
             Many DOM elements can be set up to accept (or "listen" for) these events, and execute code in response to process (or "handle") them. Event-handlers are usually connected (or "attached") to various HTML elements (such as <button>, <div>, <span>, etc.) using EventTarget.addEventListener(), and this generally replaces using the old HTML event handler attributes. Further, when properly added, such handlers can also be disconnected if needed using removeEventListener().
         </div>
+
+
+        <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if(this.value === 'night'){
+            target.style.backgroundColor='black';
+            target.style.color = 'white';
+            this.value = 'day'
+        }
+        else {
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            this.value = 'night'
+        }">
     </body>
 </html>

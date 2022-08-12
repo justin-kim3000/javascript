@@ -6,21 +6,49 @@
         </title>
     </head>
     
-    <body> 
-        <input type="button" value="hi" onclick="alert('hello')">
-        <input type="text" onkeyup="alert('key up')" onkeydown="altert('key down')">
+    <body>
+        <h1 style="color: red;">HTML</h1>
 
-        <input id="night_day" type="button" value="night" onclick="
-        if(document.querySelector('#night_day').value === 'night'){
-            document.querySelector('body').style.backgroundColor='black';
-            document.querySelector('body').style.color = 'white';
-            document.querySelector('#night_day').value = 'day'
+        <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+
+        if(this.value === 'night'){
+            target.style.backgroundColor='black';
+            target.style.color = 'white';
+
+            var a_tag = document.querySelectorAll('a');
+            var i = 0;
+            while(i < a_tag.length){
+                a_tag[i].style.color = '#C9201D';
+                i++
+            }
+
+
+            this.value = 'day'
         }
         else {
-            document.querySelector('body').style.backgroundColor='white';
-            document.querySelector('body').style.color='black';
-            document.querySelector('#night_day').value = 'night'
+            target.style.backgroundColor='white';
+            target.style.color='black';
+
+            var a_tag = document.querySelectorAll('a');
+            var i = 0;
+            while(i < a_tag.length){
+                a_tag[i].style.color = '#23B8DC';
+                i++
+            }
+
+            this.value = 'night'
         }">
+
+        <ol>
+            <a href="ex1.html" style="color: #23B8DC;"><li>Ex1</li></a>
+            <a href="ex2_loop.html" style="color: #23B8DC;"><li>Ex2</li></a>
+            <a href="if.html" style="color: #23B8DC;"><li>IF</li></a>
+            <a href="function.html" style="color: #23B8DC;"><li>Function</li></a>
+
+        </ol>
+        <input type="button" value="hi" onclick="alert('hello')">
+        
 
         <div>
             Event
@@ -34,17 +62,18 @@
         </div>
 
 
-        <input type="button" value="night" onclick="
-        var target = document.querySelector('body');
-        if(this.value === 'night'){
-            target.style.backgroundColor='black';
-            target.style.color = 'white';
-            this.value = 'day'
+
+        <input id="night_day" type="button" value="night" onclick="
+        if(document.querySelector('#night_day').value === 'night'){
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('#night_day').value = 'day'
         }
         else {
-            target.style.backgroundColor='white';
-            target.style.color='black';
-            this.value = 'night'
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            document.querySelector('#night_day').value = 'night'
         }">
+
     </body>
 </html>

@@ -14,8 +14,31 @@
             "designer" : "Carry"
         };
 
-        document.write("programmer : "+coworkers.programmer);
+        document.write("programmer : "+coworkers.programmer +"<br>");
+        document.write("designer : "+coworkers.designer+"<br>");
+
+        coworkers.ninja = "Naruto";
+        document.write("Ninja : "+coworkers.ninja+"<br>");
+        coworkers["mo mo"] = "tatoo";
+        document.write(coworkers["mo mo"]+"<br>")
+    </script>
+
+    <h2>Interate</h2>
+    <script>
+        for (var key in coworkers) {
+            document.write(key+' : '+coworkers[key]+"<br>")
+        }
     </script>
     
+    <h2>Property & Method</h2>
+    <script>
+        coworkers.showAll = function() {
+            for (var key in this) {
+                document.write(key+' : '+this[key]+"<br>");
+            }
+        }
+        coworkers.showAll()
+    </script>
+
 </body>
 </html>

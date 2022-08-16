@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="colors.js"></script>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
 <body>
     <h1>Object</h1>
     <h2>Create</h2>
+    <input type="button" value="night" onclick="nightDayChanger(this)">
+
 
     <script>
         var coworkers = {
@@ -14,7 +17,7 @@
             "designer" : "Carry"
         };
 
-        document.write("programmer : "+coworkers.programmer +"<br>");
+        document.write("<br>"+"programmer : "+coworkers.programmer +"<br>");
         document.write("designer : "+coworkers.designer+"<br>");
 
         coworkers.ninja = "Naruto";

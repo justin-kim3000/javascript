@@ -5,48 +5,12 @@
     <title>
         javascript
     </title>
-    <script>
-        function setColor(color) {
-            var a_tag = document.querySelectorAll('a');
-            var i = 0;
-            while (i < a_tag.length) {
-                a_tag[i].style.color = color;
-                i++;
-            }
-        }
-
-        function bodySetBackgroundColor(color) {
-            document.querySelector('body').style.backgroundColor = color;
-        }
-
-        function bodySetColor(color) {
-            document.querySelector('body').style.color = color;
-        }
-
-
-        function nightDayChanger(self) {
-            if (self.value === 'night') {
-                bodySetBackgroundColor('black');
-                bodySetColor('white');
-
-                setColor('#C9201D');
-                self.value = 'day';
-            }
-            else {
-                bodySetBackgroundColor('white');
-                bodySetColor('black');
-
-                setColor('#23B8DC');
-                self.value = 'night';
-            }
-        }
-    </script>
+    <script src="colors.js"></script>
 </head>
 
 <body>
     <h1 style="color: red;">HTML</h1>
-    <input type="button" value="night" onclick="nightDayChanger(this)
-        ">
+    <input type="button" value="night" onclick="nightDayChanger(this)">
 
     <ol>
         <a href="ex1.html" style="color: #23B8DC;">
@@ -84,7 +48,7 @@
 
         Many DOM elements can be set up to accept (or "listen" for) these events, and execute code in response to
         process (or "handle") them. Event-handlers are usually connected (or "attached") to various HTML elements (such
-        as <button>, <div>, <span>, etc.) using EventTarget.addEventListener(), and this generally replaces using the
+        as button, div, span, etc.) using EventTarget.addEventListener(), and this generally replaces using the
         old HTML event handler attributes. Further, when properly added, such handlers can also be
         disconnected if needed using removeEventListener().
     </div>
